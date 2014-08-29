@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<script type="text/javascript">Xpace = {}</script>
+		<script src="jquery-2.1.1.js"></script>
+		<script src="keymaster.js"></script>		
+		
+		<script src="lib/canvas.js"></script>
+		<script src="lib/util.js"></script>
+		<script src="lib/game.js"></script>
+		
+		<script src="lib/movingObject.js"></script>
+		<script src="lib/asteroid.js"></script>
+		<script src="lib/rock.js"></script>
+		<script src="lib/explosion.js"></script>
+		
+		<script src="lib/ship.js"></script>
+		<script src="lib/playerShip.js"></script>
+		<script src="lib/AIShip.js"></script>
+		<script src="lib/bulletShip.js"></script>
+		<script src="lib/rocketShip.js"></script>
+<<<<<<< HEAD
+		<script src="lib/laserShip.js"></script>
+		<script src="lib/motherShip.js"></script>
+=======
+>>>>>>> 8aa7e1264af1bc70f7e164feebb127937f12bde7
+
+		<script src="lib/bullet.js"></script>
+		<script src="lib/rocket.js"></script>
+		<script src="lib/laser.js"></script>
+	</head>
+	
+	<body>
+		<div id="counter"></div>
+		<div id="rock-counter"></div>
+		<div id="ship-counter"></div>
+		<div id="rocket-counter"></div>
+		<div id="explosion-counter"></div>
+		<div id="targets"></div>
+<<<<<<< HEAD
+		<div id="laser-counter"></div>
+		<div id="volume"></div>
+		<input type="range" min="0" max="100" onchange="updateVolume(this.value)">
+
+		<canvas height="720" width="1800" border="1"></canvas>
+		<script type="text/javascript">
+			var canvas = $("canvas")[0]
+			var ctx = canvas.getContext("2d")
+			var game = new Game(100)
+			updateVolume(50)
+=======
+		<canvas height="720" width="1900" border="1"></canvas>
+		<script type="text/javascript">
+			var canvas = $("canvas")[0]
+			var ctx = canvas.getContext("2d")
+			Canvas.pos = [canvas.width / 2, canvas.height / 2]
+			var game = new Game(100)
+>>>>>>> 8aa7e1264af1bc70f7e164feebb127937f12bde7
+		</script>
+	</body>
+</html>
