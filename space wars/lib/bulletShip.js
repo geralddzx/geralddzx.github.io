@@ -22,5 +22,5 @@ BulletShip.prototype.setImage = function(){
 }
 
 BulletShip.prototype.setTargetRange = function(){
-	this.targetRange = Math.random() * 200 + 100
+	this.targetRange = Math.random() * 100 + 50
 }

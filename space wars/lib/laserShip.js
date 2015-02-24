@@ -20,7 +20,7 @@ LaserShip.prototype.setImage = function(){
 }
 
 LaserShip.prototype.setTargetRange = function(){
-	this.targetRange = Math.random() * 200 + 600
+	this.targetRange = Math.random() * 200 + 200
 }
 
 LaserShip.ROCKETPOWER = 0.2

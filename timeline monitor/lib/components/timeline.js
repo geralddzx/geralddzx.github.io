@@ -101,7 +101,9 @@
 		this.time = date.getTime() / 1000
 	}
 
-	Timeline.displaySize = 100
+	Timeline.prototype.displaySize = function() {
+        return Math.round(100 * 100 / this.zoom)
+    }
 
 	Timeline.states = ["green", "amber", "red", "walk", "dw", "pp"]
 })()

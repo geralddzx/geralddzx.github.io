@@ -98,7 +98,7 @@ MotherShip.prototype.setImage = function(){
 }
 
 MotherShip.prototype.setTargetRange = function(){
-	this.targetRange = 500
+	this.targetRange = 350
 }
 
 MotherShip.prototype.accelerate = function(){

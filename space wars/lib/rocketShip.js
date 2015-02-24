@@ -21,7 +21,7 @@ RocketShip.prototype.setImage = function(){
 }
 
 RocketShip.prototype.setTargetRange = function(){
-	this.targetRange = Math.random() * 200 + 600
+	this.targetRange = Math.random() * 200 + 150
 }
 
 RocketShip.ROCKETPOWER = 0.2

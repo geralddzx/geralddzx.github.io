@@ -13,6 +13,7 @@
 	Monitor.prototype.buildControls = function(){
 		this.control = new TM.Control(this)
 		this.speedControl = new TM.SpeedControl(this)
+		this.sizeControl = new TM.SizeControl(this)
 		this.config = new TM.Config(this)
 	}
 
@@ -35,8 +36,9 @@
 		this.drawDevice()
 		this.config.displayTimeline && this.scroll.draw()
 		this.speedControl.buttonGroup.reset()
-		this.sizeControl && this.sizeControl.buttonGroup.reset()
+		this.sizeControl.buttonGroup.reset()
 		this.config.draw()
+		this.control.draw()
 	}
 
 	Monitor.prototype.drawBackground = function(){

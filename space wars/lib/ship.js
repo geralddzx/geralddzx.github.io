@@ -66,7 +66,7 @@ Ship.prototype.marked = function(object){
 
 Ship.prototype.draw = function(){
 	MovingObject.prototype.draw.call(this)
-	$("#targets").html("Marked Targets: " + this.markedTargets.length)
+	// $("#targets").html("Marked Targets: " + this.markedTargets.length)
 	$("#rocket-counter").html("Rockets: " + this.game.rockets().length)
 }
 

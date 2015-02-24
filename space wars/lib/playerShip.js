@@ -35,16 +35,28 @@ PlayerShip.prototype.bindKeys = function(){
 		key(turnKey, ship.turn.bind(ship, PlayerShip.TURNS[turnKey]))
 	})
 	Object.keys(PlayerShip.SHIFTS).forEach(function(shiftKey){
-		key(shiftKey, ship.shift.bind(ship, PlayerShip.SHIFTS[shiftKey]))
+		key(shiftKey, function(){
+			event.preventDefault()
+			ship.shift(PlayerShip.SHIFTS[shiftKey])
+		})
 	})
 	key("z", function(){
-		ship.fireBullet(ship.left())
-		ship.fireBullet(ship.right())
+		if(!ship.lastBullet || (Date.now() - ship.lastBullet) > 300){
+			ship.fireBullet(ship.left())
+			ship.fireBullet(ship.right())
+			ship.lastBullet = Date.now()
+		}
 	})
+
 	key("x", function(){
-		ship.fireRocket(ship.center())
+		if(!ship.lastRocket || (Date.now() - ship.lastRocket) > 300){
+			ship.fireRocket(ship.center())
+			ship.lastRocket = Date.now()
+		}	
 	})
-	key("c", this.fireLaser.bind(this))
+	key("c", function(){
+		ship.fireLaser()
+	})
 }
 
 PlayerShip.prototype.unbindKeys = function(){

@@ -28,43 +28,60 @@
 	</head>
 
 	<body>
-		<h2>Instructions</h2>
 		<table>
-			<tr>
-				<td valign="top" width="200">
-					W - accelerate up <br>
-					A - accelerate left <br>
-					S - accelerate down <br>
-					D - accelerate right <br>
-					Q - rotate counter clockwise <br>
-					E - rotate clockwise <br>
-				</td>
-				<td valign="top" width="200">				
-					↑ - move up <br>
-					← - move left <br>
-					→ - move right <br>
-					↓ - move down <br>
-				</td>
-				<td valign="top" width="200">				
-					Z - fire bullet <br>
-					X - fire rocket <br>
-					C - fire laser <br>
-				</td>
-				<td valign="top" width="200">
-					<div id="counter"></div>
-					<div id="rock-counter"></div>
-					<div id="ship-counter"></div>
-					<div id="rocket-counter"></div>
-					<div id="explosion-counter"></div>
-					<div id="targets"></div>
-					<div id="laser-counter"></div>
-					<div id="volume"></div>
-					<input type="range" min="0" max="100" onchange="updateVolume(this.value)">
-				</td>
-			</tr>
+		<tr>
+			<td>
+				<canvas height="540" width="1080" border="1" style="display:inline"></canvas>
+			</td>
+		
+			<td>
+				<div style="display:inline; width:300px">
+					<h2>Instructions</h2>
+					<p>
+						W - accelerate forward <br>
+						A - accelerate left <br>
+						S - accelerate backward <br>
+						D - accelerate right <br>
+						Q - rotate counter clockwise <br>
+						E - rotate clockwise <br>
+					</p>
+					<p>
+						↑ - move up <br>
+						← - move left <br>
+						→ - move right <br>
+						↓ - move down <br>
+					</p>
+					<p>
+						Z - fire bullet <br>
+						X - fire rocket <br>
+						C - fire laser <br>
+					</p>
+					<p>
+						<div id="counter"></div>
+						<div id="rock-counter"></div>
+						<div id="ship-counter"></div>
+						<div id="rocket-counter"></div>
+						<div id="explosion-counter"></div>
+						<div id="targets"></div>
+						<div id="laser-counter"></div>
+						<div id="volume"></div>
+						<input type="range" min="0" max="100" onchange="updateVolume(this.value)">
+					</p>
+				</div>
+			</td>
+		</tr>
 		</table>
 
-		<canvas height="720" width="1800" border="1"></canvas>
+		<div>
+			<h4>Welcome to the demo</h4>
+			<ul>
+				<li>AI enemy ships approach and fire at player ship while dodging obstacles and bullets
+				<li>space rocks collide on impact following laws of momentum
+				<li>guided missiles that follow its target until destroyed
+				<li>Player ship is set to invincible
+			</ul>
+		</div>
+
 		<script type="text/javascript">
 			var canvas = $("canvas")[0]
 			var ctx = canvas.getContext("2d")

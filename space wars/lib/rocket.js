@@ -70,9 +70,6 @@ Rocket.prototype.adjustDir = function(){
 }
 
 Rocket.prototype.resetTarget = function(){
-	if (this.ship.constructor == PlayerShip && this.game.motherShip){
-		return this.target(this.game.motherShip)
-	}
 	if (this.ship.target){
 		this.target(this.ship.target)
 	} else if (!this.target()){

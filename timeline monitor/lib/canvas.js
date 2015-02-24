@@ -3,7 +3,7 @@ Canvas = function(width, height){
 	this.ctx = this.element.getContext("2d")
 	this.width(width)
 	this.height(height)
-	$('body').append($(this.element))
+	$('#canvas').append($(this.element))
 	this.preventTextCursor()
 }
 

@@ -1,13 +1,13 @@
 (function (){
-	var ElementGroup = TM.ElementGroup = function(xOffset, yOffset, spacing, h, v, w, h, parent){
+	var ElementGroup = TM.ElementGroup = function(xOffset, yOffset, spacing, h, v, width, height, parent){
 		this.elements = []
 		this.xOffset = xOffset
 		this.yOffset = yOffset
 		this.spacing = spacing
 		this.h = h
 		this.v = v
-		this.w = w
-		this.h = h
+		this._width = width
+		this._height = height
 		this.parent = parent
 	}
 
@@ -34,11 +34,11 @@
 	}
 
 	ElementGroup.prototype.width = function(){
-		return this.w * this.parent.width()
+		return this._width * this.parent.width()
 	}
 
 	ElementGroup.prototype.height = function(){
-		return this.h * this.parent.height()
+		return this._height * this.parent.height()
 	}
 
 	ElementGroup.prototype.reset = function(){
