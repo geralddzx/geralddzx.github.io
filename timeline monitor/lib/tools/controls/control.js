@@ -3,6 +3,7 @@
 		this.monitor = 	monitor
 		this.timeline = monitor.timeline
 		this.buildZoom()
+		this.buildRefresh()
 	}
 
 	Control.prototype.height = function(){
@@ -62,8 +63,20 @@
 		return btn
 	}
 
+	Control.prototype.buildRefresh = function(){
+		this.refreshButton = new TM.ElementGroup(0.8, 1.01, 0, false, false, 0.2, 0.2, this)
+		var btn = new TM.Button("Change Intersection")
+		var control = this
+		$(btn.element).click(function(){
+			control.timeline.newIntersection()
+			control.monitor.draw()
+		})
+		this.refreshButton.add(btn)
+	}
+
 	Control.prototype.draw = function(){
 		this.zoomButtons.reset()
+		this.refreshButton.reset()
 	}
 
 })()
