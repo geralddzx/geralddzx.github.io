@@ -1,6 +1,11 @@
 <h1>Please pick a demo</h1>
-<button href="/timeline monitor/index.html">Timeline Monitor</button>
-<button href="/space wars/index.html">Space Wars</button>
+<form method="get" action="/space wars/index.html">
+    <button type="submit">Space Wars</button>
+</form>
+
+<form method="get" action="/timeline monitor/index.html">
+    <button type="submit">Timeline Monitor</button>
+</form>
 
 <script>
 	if(window.location.search == "?tm"){
