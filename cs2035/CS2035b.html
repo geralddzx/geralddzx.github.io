@@ -1,0 +1,285 @@
+<!-- saved from url=(0038)http://www.csd.uwo.ca/Courses/CS2035b/ -->
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+		<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="cs2035.css">
+		<script src="jquery.min.js"></script>
+		<script src="bootstrap.min.js"></script>
+	</head>
+
+
+
+<body style="padding-left:20px">
+	<!-- Bootstrap Navbar -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+		<div class="navbar-header navbar-left">
+	    <h4>
+	    	CS2035b (Winter 2015) 
+	    </h4>
+	    <h5>
+	    	Dealing with Data: Analysis and Visualization
+	    </h5>
+	  </div>
+
+		<div class="collapse navbar-collapse navbar-right" style="height:64px;">
+		  <ul class="nav navbar-nav">
+		    <li class="tab"><a href="#course-information">Course Information</a></li>
+		    <li class="tab"><a href="#labs">Labs</a></li>
+		    <li class="tab"><a href="#assignments">Assignments</a></li>
+		    <li class="tab"><a href="#midterm-final">Midterm/Final</a></li>
+
+		    <li class="tab" id="course-outline" data-toggle="tooltip" data-placement="left" title="Course Notes and Some Matlab Code. ID and password will be given in class."><a href="http://www.csd.uwo.ca/Courses/CS2035b/secure/notescode.html" target="_blank">Course Notes</a>
+		  	<li class="tab" id="course-outline"><a href="http://www.csd.uwo.ca/Courses/CS2035b/outline2015.pdf" target="_blank">2015 Course Outline</a>
+		  </ul>
+		</div>
+	</div>
+	</nav>
+
+	<!-- Handle navbar clicks -->
+	<script>
+		cs2035 = {}
+
+		cs2035.selectTab = function(target){
+			$(".tab").removeClass("active")
+			$(target).addClass("active")
+			var topPos = $($(target).find("a").attr("href")).offset().top
+			$('html, body').animate({scrollTop : topPos}, 500);
+			event.preventDefault()
+		}
+
+		$('.tab').click(function(){
+			cs2035.selectTab(event.currentTarget)
+		})
+	</script>
+
+	<!-- Course Information -->
+	<div id="course-information"></div>
+	<br>
+  <br>
+	<br>
+
+	<h2>Course Information</h2>
+	<p> 
+		CS2035 is a 2nd year introductionary course in using MatLab for data analysis and visualization. The everyday name for the course is Data Analysis and Visualization.
+	</p>
+	<hr>
+
+	<table id="info-table">
+	<tr>
+		<td class="expand">
+			<a><h3>Professor Information</h3></a>
+				<ul>
+					<b>
+						Prof. John Barron<br>
+						Dept. of Computer Science<br>
+					</b>
+					Middlesex College 379<br>
+					The University of Western Ontario<br>
+					London, Ontario, N6A 5B7<br>
+					<br>
+					Phone: (519) 661-2111 x86896<br>
+					Fax: (519) 661-3515<br>
+					<br>
+					<a href="mailto:barron@csd.uwo.ca"> barron@csd.uwo.ca</a><br>
+					<a href="http://www.csd.uwo.ca/faculty/barron/"> http://www.csd.uwo.ca/faculty/barron/</a> 
+				</ul>
+		</td>
+	</tr>
+
+	<tr>
+		<td class="expand">
+			<a><h3>Schedule and Location</h3></a>
+			<ul>
+				<b>Classes</b>
+				<ul>
+				  <li>Monday 3:30pm-5:30pm in NCB117</li>
+				  <li>Friday 2:30pm-3:30pm in MC105B</li>
+				</ul>
+				<b>Labs</b>
+				<ul>
+					<li>Friday 3:30pm-4:30pm (Lab 002) OR</li>
+					<li>Friday 4:30-5:30pm (Lab 003) HSB14</li>
+					<li>You must attend the lab you are registered in</li>
+				</ul>
+				   
+				<b>Office Hours:</b> Friday 10:00am-noon MC379<br>
+				<b>Midterm Exams:</b> Friday February 27th, in class<br>
+				<b>Final Exam:</b>TBA<br>
+			</ul>
+		</td>
+	</tr>
+
+	<tr>
+		<td class="expand">
+			<a><h3>Teaching Assistant</h3></a>
+			<ul>
+				<b>Teaching Assistant: </b><a href="mailto:achaud29@csd.uwo.ca">Ayan Chaudhury</a><br>
+				<b>Office Hours: </b>12.30pm-1.30pm, Tuesdays and Wednesdays in MC4A.
+			</ul>
+		</td>
+	</tr>
+	</table>
+
+	<!-- Labs -->
+	<div id="labs"></div>
+	<br>
+  <br>
+	<br>
+
+	<h2>Labs</h2>
+	<hr>
+	<div class="toggle"><a href="http://www.csd.uwo.ca/Courses/CS2035b/lab01.pdf">Lab 1 (AVAILABLE, Lab 1, Friday, January 16th)</a></div><br>
+	<div class="toggle"><a href="http://www.csd.uwo.ca/Courses/CS2035b/lab02.pdf">Lab 2 (AVAILABLE, Lab 2, Friday, January 23th)</a></div><br>
+	<div class="toggle"><a href="http://www.csd.uwo.ca/Courses/CS2035b/lab03.pdf">Lab 3 (AVAILABLE, Lab 3, Friday, January 30st)</a></div><br> 
+	<div class="toggle"><a href="http://www.csd.uwo.ca/Courses/CS2035b/lab04.pdf">Lab 4 (AVAILABLE, Lab 4, Friday, Febrary 6th)</a></div><br> 
+	<div class="toggle"><a href="http://www.csd.uwo.ca/Courses/CS2035b/lab05.pdf">Lab 5 (AVAILABLE, Lab 5, Friday, Febrary 13th)</a></div><br> 
+  <div class="toggle"><a href="http://www.csd.uwo.ca/Courses/CS2035b/lab06.pdf">Lab 6 (AVAILABLE, Lab 6, Friday, Febrary 27th)</a></div><br> 
+	<div class="toggle">
+		<a href="http://www.csd.uwo.ca/Courses/CS2035b/lab07.pdf">Lab 7 (AVAILABLE, Lab 7, Friday, March 6th)</a><br>
+		<ul class="toggle"> 
+			<li><a href="http://www.csd.uwo.ca/Courses/CS2035b/L08plot3U.m">L08plot3U.m (AVAILABLE)</a> </li>
+			<li><a href="http://www.csd.uwo.ca/Courses/CS2035b/grs2rgb.m">grs2rgb.m (AVAILABLE)</a> </li>
+	    <li><a href="http://www.csd.uwo.ca/Courses/CS2035b/MRI_DATA_9.mat">MRI_DATA_9.mat (AVAILABLE)</a> </li>
+	  </ul>
+	</div><br>
+	<div class="toggle"><a href="http://www.csd.uwo.ca/Courses/CS2035b/lab08.pdf">Lab 8 (AVAILABLE, Lab 8, Friday, March 14th)</a></div><br>
+	<div class="toggle"><a href="http://www.csd.uwo.ca/Courses/CS2035b/lab09.pdf">Lab 9 (AVAILABLE, Lab 9, Friday, March 21st)</a>
+	  <ul>
+		  <li><a href="http://www.csd.uwo.ca/Courses/CS2035b/example_lab9.m">example_lab9.m (AVAILABLE)</a></li>
+		  <li><a href="http://www.csd.uwo.ca/Courses/CS2035b/lab09dataset1.mat">lab09dataset1 (AVAILABLE)</a></li>
+		  <li><a href="http://www.csd.uwo.ca/Courses/CS2035b/lab09dataset2.mat">lab09dataset2 (AVAILABLE)</a></li>
+		  <li><a href="http://www.csd.uwo.ca/Courses/CS2035b/lab09dataset3.mat">lab09dataset3 (AVAILABLE)</a></li>
+	  </ul>
+	</div><br>
+
+	<div class="toggle">
+		<A HREF="lab10.pdf">Lab 10 (AVAILABLE, Lab 10, Friday, March 28st)</A>
+   	<ul>
+	    <li><A HREF="lab10dataset1.mat">lab10dataset1.mat (AVAILABLE)</A></li>
+	    <li><A HREF="lab10dataset2.mat">lab10dataset2.mat (AVAILABLE)</A></li>
+	    <li><A HREF="lab10dataset3.mat">lab10dataset3.mat (AVAILABLE)</A></li>
+	    <li><A HREF="lab10dataset4.mat">lab10dataset4.mat (AVAILABLE)</A></li>
+	    <li><A HREF="lab10dataset5.mat">lab10dataset5.mat (AVAILABLE)</A></li>
+	  </ul>
+	</div><br>
+
+	<div class="toggle">
+		<A HREF="lab11.pdf">Lab 11 (AVAILABLE, Lab 11, Friday, April 4th)</A>
+   	<ul>
+	    <li><A HREF="lab11.m">lab11.m (AVAILABLE)</A></li>
+	    <li><A HREF="lena.jpg">lena.jpg (AVAILABLE)</A></li>
+	    <li><A HREF="mando.jpg">mando.jpg (AVAILABLE)</A></li>
+	    <li><A HREF="lena.ras">lena.ras</A></li>
+	    <li><A HREF="mandrill.ras">mandrill.ras</A></li>
+	  </ul>
+	</div><br>
+
+	<!-- Handle Lab Toggle -->
+  <script>
+  	$('.toggle ul').hide()
+  	$('.toggle').hover(function(){
+  		$(event.currentTarget).find("ul").show()
+  	}, function(){
+  		$(event.currentTarget).find("ul").hide()
+  	})
+  </script>
+
+  <!-- Assignments -->
+  <div id="assignments"></div>
+  <br>
+	<br>
+	<br>
+
+	<h2>Assignments</h2>
+	<hr>
+	<div class="expand">
+		<a><h4>Assignment 1</h4></a>
+		<ul>
+			<li><a href="http://www.csd.uwo.ca/Courses/CS2035b/ass1_2015.pdf">Assignment 1, 2015 AVAILABLE</a></li>
+			<li><a href="http://www.csd.uwo.ca/Courses/CS2035b/commented_new_decimal2roman.m">commented_new_decimal2roman.m</a></li>
+			<li><a href="http://www.csd.uwo.ca/Courses/CS2035b/commented_new_roman2decimal.m">commented_new_roman2decimal.m</a></li>
+			<li><a href="http://www.csd.uwo.ca/Courses/CS2035b/old_decimal2roman.m">old_decimal2roman.m</a></li>
+			<li><a href="http://www.csd.uwo.ca/Courses/CS2035b/old_roman2decimal.m">old_roman2decimal.m</a></li>
+			<li><a href="http://www.csd.uwo.ca/Courses/CS2035b/old_test_roman_decimal_conversions.m">old_test_roman_decimal_conversions.m</a></li>
+			<li><a href="http://www.csd.uwo.ca/Courses/CS2035b/tutorial_ass1_2035_2015.txt">Tutorial for assignment 1</a></li>
+		</ul>
+	</div>
+
+	<div class="expand">
+		<a><h4>Assignment 2</h4></a>
+		<ul>
+			<li><a href="http://www.csd.uwo.ca/Courses/CS2035b/ass2_2015.pdf">Assignment 2, 2015 AVAILABLE</a></li>
+			<li><a href="http://www.csd.uwo.ca/Courses/CS2035b/ass2_template_2015.m">Assignment 2 template file (AVAILABLE)</a></li>
+			<li><a href="http://www.csd.uwo.ca/Courses/CS2035b/tutorial_ass2_2035_2015.txt">Tutorial for 2015 assignment 2</a></li>
+			<li><a href="http://www.csd.uwo.ca/Courses/CS2035b/ass2_2014.pdf">Assignment 2 2014 AVAILABLE</a></li>
+			<li><a href="http://www.csd.uwo.ca/Courses/CS2035b/ass2_rational_approximation_2014.m">MatLab for 2014 assignment 2</a></li>
+		</ul>
+	</div>
+
+	<div class="expand">
+		<a><h4>Assignment 3</h4></a>
+			<ul>
+				<li><a href="http://www.csd.uwo.ca/Courses/CS2035b/ass3_2015.pdf">Assignment 3 (AVAILABLE)</a></li>
+			</ul>
+		</h4>
+	</div>
+	
+	<div class="expand">
+		<a><h4>Assignment 3</h4></a>
+		<ul>
+			<li><a href="http://www.csd.uwo.ca/Courses/CS2035b/ass4_2014.pdf">Assignment 4 [2014] (AVAILABLE)</a></li>
+			<li><a href="http://www.csd.uwo.ca/Courses/CS2035b/ass4_2015.pdf">Assignment 4 [2015] (AVAILABLE)</a></li>
+      <li><a href="http://www.csd.uwo.ca/Courses/CS2035b/ass4_shell_2015.m">ass4_shell_2015.m (AVAILABLE)</a></li>
+      <li><a href="http://www.csd.uwo.ca/Courses/CS2035b/london_weather_1941_2013.mat">london_weather_1941_2013.mat (AVAILABLE)</a></li>
+    </ul>
+  </div>
+
+	<!--   Midterm/Final -->
+	<div id="midterm-final"></div>
+  <br>
+	<br>
+	<br>
+
+  <h2> Midterm/Final Exams</h2>
+  <div class="expand">
+		<a><h4>Midterms</h4></a>
+		<ul>
+			<li><a href="http://www.csd.uwo.ca/Courses/CS2035b/midterm_outline_2015.txt">CS2035_midterm_outline_2015 (AVAILABLE)</a></li>
+			<li><a href="http://www.csd.uwo.ca/Courses/CS2035b/cs2035_midterm_soln_2015.pdf">Midterm 2015 with answers (AVAILABLE)</a></li>
+			<li><a href="http://www.csd.uwo.ca/Courses/CS2035b/cs2035_midterm_2015.pdf">Midterm 2015 without answers (AVAILABLE)</a></li>
+			<li><a href="http://www.csd.uwo.ca/Courses/CS2035b/cs2035_midterm_soln_2014.pdf">Midterm 2014 with answers (AVAILABLE)</a></li>
+			<li><a href="http://www.csd.uwo.ca/Courses/CS2035b/cs2035_midterm_2014.pdf">Midterm 2014 without answers (AVAILABLE)</a>
+		</ul>
+	</div>
+  
+  <div class="expand">
+	 	<a><h4>Final</h4></a>
+		<ul>
+			<li><a href="http://www.csd.uwo.ca/Courses/CS2035b/final_outline_2015.txt">CS2035_final_outline_2015 (NOT AVAILABLE)</a></li>
+			<li><a href="http://www.csd.uwo.ca/Courses/CS2035b/cs2035_final_soln_2014.pdf">Final 2014 with answers (AVAILABLE)</a></li>
+			<li><a href="http://www.csd.uwo.ca/Courses/CS2035b/cs2035_final_2014.pdf">Final 2014 without answers (AVAILABLE)</a></li>
+	  </ul>  
+	</div>
+   
+  <!-- Handle Assignment Expand -->
+  <script>
+  	$('.expand').addClass("collapsed")
+  	$('.expand a').click(function(){
+  		var target = $(event.currentTarget).parent()
+  		if(target.hasClass("collapsed")){
+  			target.removeClass("collapsed")
+  		} else {
+  			target.addClass("collapsed")
+  		} 
+  	})
+  </script>
+
+	<!-- Initialize Tool Tip -->
+	<script>
+		$(function () {
+		  $('[data-toggle="tooltip"]').tooltip()
+		})
+	</script>
+</body></html>
