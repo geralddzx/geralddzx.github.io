@@ -1,26 +1,24 @@
 <!-- saved from url=(0038)http://www.csd.uwo.ca/Courses/CS2035b/ -->
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-		<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="cs2035.css">
-		<script src="jquery.min.js"></script>
-		<script src="bootstrap.min.js"></script>
-	</head>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="cs2035.css">
+	<script src="jquery.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+</head>
 
 
 
 <body style="padding-left:20px">
 	<!-- Bootstrap Navbar -->
-	<nav class="navbar navbar-default navbar-fixed-top">
+	<nav class="navbar navbar-default navbar-fixed-top" style="background-color:#FFF; border-width: 2px">
   <div class="container-fluid">
 		<div class="navbar-header navbar-left">
-	    <h4>
-	    	CS2035b (Winter 2015) 
-	    </h4>
-	    <h5>
-	    	Dealing with Data: Analysis and Visualization
-	    </h5>
+			<img style="padding:5px;" src="images/logo.gif">
+	    <h3>
+	    	CS2035 Data Analysis and Visualization
+	    </h3>
 	  </div>
 
 		<div class="collapse navbar-collapse navbar-right" style="height:64px;">
@@ -45,7 +43,7 @@
 			$(".tab").removeClass("active")
 			$(target).addClass("active")
 			var topPos = $($(target).find("a").attr("href")).offset().top
-			$('html, body').animate({scrollTop : topPos}, 500);
+			$('html, body').animate({scrollTop : topPos - $(".navbar-default").height() - 10}, 500);
 			event.preventDefault()
 		}
 
@@ -54,13 +52,19 @@
 		})
 	</script>
 
-	<!-- Course Information -->
-	<div id="course-information"></div>
+	<br>
+ 	<br>
+	<br>
 	<br>
   <br>
 	<br>
 
-	<h2>Course Information</h2>
+	<!-- Course Information -->
+	<br>
+  <br>
+	<br>
+
+	<h2 id="course-information">Course Information</h2>
 	<p> 
 		CS2035 is a 2nd year introductionary course in using MatLab for data analysis and visualization. The everyday name for the course is Data Analysis and Visualization.
 	</p>
@@ -123,76 +127,93 @@
 	</table>
 
 	<!-- Labs -->
-	<div id="labs"></div>
 	<br>
   <br>
 	<br>
 
-	<h2>Labs</h2>
+	<h2 id="labs">Labs</h2>
 	<hr>
-	<div class="toggle"><a href="http://www.csd.uwo.ca/Courses/CS2035b/lab01.pdf">Lab 1 (AVAILABLE, Lab 1, Friday, January 16th)</a></div><br>
-	<div class="toggle"><a href="http://www.csd.uwo.ca/Courses/CS2035b/lab02.pdf">Lab 2 (AVAILABLE, Lab 2, Friday, January 23th)</a></div><br>
-	<div class="toggle"><a href="http://www.csd.uwo.ca/Courses/CS2035b/lab03.pdf">Lab 3 (AVAILABLE, Lab 3, Friday, January 30st)</a></div><br> 
-	<div class="toggle"><a href="http://www.csd.uwo.ca/Courses/CS2035b/lab04.pdf">Lab 4 (AVAILABLE, Lab 4, Friday, Febrary 6th)</a></div><br> 
-	<div class="toggle"><a href="http://www.csd.uwo.ca/Courses/CS2035b/lab05.pdf">Lab 5 (AVAILABLE, Lab 5, Friday, Febrary 13th)</a></div><br> 
-  <div class="toggle"><a href="http://www.csd.uwo.ca/Courses/CS2035b/lab06.pdf">Lab 6 (AVAILABLE, Lab 6, Friday, Febrary 27th)</a></div><br> 
-	<div class="toggle">
-		<a href="http://www.csd.uwo.ca/Courses/CS2035b/lab07.pdf">Lab 7 (AVAILABLE, Lab 7, Friday, March 6th)</a><br>
-		<ul class="toggle"> 
+	<!-- lab 1(no expand) -->
+	<div class="expand">
+		<a href="http://www.csd.uwo.ca/Courses/CS2035b/lab01.pdf">Lab 1 (AVAILABLE, Lab 1, Friday, January 16th)</a>
+	</div><br>
+	<!-- lab 2(no expand) -->
+	<div class="expand">
+		<a href="http://www.csd.uwo.ca/Courses/CS2035b/lab02.pdf">Lab 2 (AVAILABLE, Lab 2, Friday, January 23th)</a>
+	</div><br>
+	<!-- lab 3(no expand) -->
+	<div class="expand">
+		<a href="http://www.csd.uwo.ca/Courses/CS2035b/lab03.pdf">Lab 3 (AVAILABLE, Lab 3, Friday, January 30st)</a>
+	</div><br> 
+	<!-- lab 4(no expand) -->
+	<div class="expand">
+		<a href="http://www.csd.uwo.ca/Courses/CS2035b/lab04.pdf">Lab 4 (AVAILABLE, Lab 4, Friday, Febrary 6th)</a>
+	</div><br> 
+	<!-- lab 5(no expand) -->
+	<div class="expand">
+		<a href="http://www.csd.uwo.ca/Courses/CS2035b/lab05.pdf">Lab 5 (AVAILABLE, Lab 5, Friday, Febrary 13th)</a>
+	</div><br> 
+	<!-- lab 6(no expand) -->
+  <div class="expand">
+  	<a href="http://www.csd.uwo.ca/Courses/CS2035b/lab06.pdf">Lab 6 (AVAILABLE, Lab 6, Friday, Febrary 27th)</a>
+  </div><br>
+  <!-- lab 7(with expand) -->
+	<div class="expand">
+		<a>Lab 7 (AVAILABLE, Lab 7, Friday, March 6th)</a>
+		<ul class="expand"> 
+			<a href="http://www.csd.uwo.ca/Courses/CS2035b/lab07.pdf">Lab 7 (AVAILABLE, Lab 7, Friday, March 6th)</a>
 			<li><a href="http://www.csd.uwo.ca/Courses/CS2035b/L08plot3U.m">L08plot3U.m (AVAILABLE)</a> </li>
 			<li><a href="http://www.csd.uwo.ca/Courses/CS2035b/grs2rgb.m">grs2rgb.m (AVAILABLE)</a> </li>
 	    <li><a href="http://www.csd.uwo.ca/Courses/CS2035b/MRI_DATA_9.mat">MRI_DATA_9.mat (AVAILABLE)</a> </li>
 	  </ul>
 	</div><br>
-	<div class="toggle"><a href="http://www.csd.uwo.ca/Courses/CS2035b/lab08.pdf">Lab 8 (AVAILABLE, Lab 8, Friday, March 14th)</a></div><br>
-	<div class="toggle"><a href="http://www.csd.uwo.ca/Courses/CS2035b/lab09.pdf">Lab 9 (AVAILABLE, Lab 9, Friday, March 21st)</a>
+	<!-- lab 8(no expand) -->
+	<div class="expand">
+		<a href="http://www.csd.uwo.ca/Courses/CS2035b/lab08.pdf">Lab 8 (AVAILABLE, Lab 8, Friday, March 14th)</a>
+	</div><br>
+	<!-- lab 9(with expand) -->
+	<div class="expand">
+		<a>Lab 9 (AVAILABLE, Lab 9, Friday, March 21st)</a>
 	  <ul>
+	  	<a href="http://www.csd.uwo.ca/Courses/CS2035b/lab09.pdf">Lab 9 (AVAILABLE, Lab 9, Friday, March 21st)</a>
 		  <li><a href="http://www.csd.uwo.ca/Courses/CS2035b/example_lab9.m">example_lab9.m (AVAILABLE)</a></li>
 		  <li><a href="http://www.csd.uwo.ca/Courses/CS2035b/lab09dataset1.mat">lab09dataset1 (AVAILABLE)</a></li>
 		  <li><a href="http://www.csd.uwo.ca/Courses/CS2035b/lab09dataset2.mat">lab09dataset2 (AVAILABLE)</a></li>
 		  <li><a href="http://www.csd.uwo.ca/Courses/CS2035b/lab09dataset3.mat">lab09dataset3 (AVAILABLE)</a></li>
 	  </ul>
 	</div><br>
-
-	<div class="toggle">
-		<A HREF="lab10.pdf">Lab 10 (AVAILABLE, Lab 10, Friday, March 28st)</A>
+	<!-- lab 10(with expand) -->
+	<!-- <div class="expand">
+		<A>Lab 10 (AVAILABLE, Lab 10, Friday, March 28st)</A>
+   		<ul>
+	   		<li><A HREF="lab10.pdf">Lab 10 (AVAILABLE, Lab 10, Friday, March 28st)</A></li>
+		    <li><A HREF="lab10dataset1.mat">lab10dataset1.mat (AVAILABLE)</A></li>
+		    <li><A HREF="lab10dataset2.mat">lab10dataset2.mat (AVAILABLE)</A></li>
+		    <li><A HREF="lab10dataset3.mat">lab10dataset3.mat (AVAILABLE)</A></li>
+		    <li><A HREF="lab10dataset4.mat">lab10dataset4.mat (AVAILABLE)</A></li>
+		    <li><A HREF="lab10dataset5.mat">lab10dataset5.mat (AVAILABLE)</A></li>
+		  </ul>
+	</div><br> -->
+	<!-- lab 11(with expand) -->
+	<!-- <div class="expand">
+		<A>Lab 11 (AVAILABLE, Lab 11, Friday, April 4th)</A>
    	<ul>
-	    <li><A HREF="lab10dataset1.mat">lab10dataset1.mat (AVAILABLE)</A></li>
-	    <li><A HREF="lab10dataset2.mat">lab10dataset2.mat (AVAILABLE)</A></li>
-	    <li><A HREF="lab10dataset3.mat">lab10dataset3.mat (AVAILABLE)</A></li>
-	    <li><A HREF="lab10dataset4.mat">lab10dataset4.mat (AVAILABLE)</A></li>
-	    <li><A HREF="lab10dataset5.mat">lab10dataset5.mat (AVAILABLE)</A></li>
-	  </ul>
-	</div><br>
-
-	<div class="toggle">
-		<A HREF="lab11.pdf">Lab 11 (AVAILABLE, Lab 11, Friday, April 4th)</A>
-   	<ul>
+   		<li><A HREF="lab11.pdf">Lab 11 (AVAILABLE, Lab 11, Friday, April 4th)</A></li>
 	    <li><A HREF="lab11.m">lab11.m (AVAILABLE)</A></li>
 	    <li><A HREF="lena.jpg">lena.jpg (AVAILABLE)</A></li>
 	    <li><A HREF="mando.jpg">mando.jpg (AVAILABLE)</A></li>
 	    <li><A HREF="lena.ras">lena.ras</A></li>
 	    <li><A HREF="mandrill.ras">mandrill.ras</A></li>
 	  </ul>
-	</div><br>
+	</div><br> -->
 
-	<!-- Handle Lab Toggle -->
-  <script>
-  	$('.toggle ul').hide()
-  	$('.toggle').hover(function(){
-  		$(event.currentTarget).find("ul").show()
-  	}, function(){
-  		$(event.currentTarget).find("ul").hide()
-  	})
-  </script>
 
   <!-- Assignments -->
-  <div id="assignments"></div>
   <br>
 	<br>
 	<br>
 
-	<h2>Assignments</h2>
+	<h2 id="assignments">Assignments</h2>
 	<hr>
 	<div class="expand">
 		<a><h4>Assignment 1</h4></a>
@@ -227,7 +248,7 @@
 	</div>
 	
 	<div class="expand">
-		<a><h4>Assignment 3</h4></a>
+		<a><h4>Assignment 4</h4></a>
 		<ul>
 			<li><a href="http://www.csd.uwo.ca/Courses/CS2035b/ass4_2014.pdf">Assignment 4 [2014] (AVAILABLE)</a></li>
 			<li><a href="http://www.csd.uwo.ca/Courses/CS2035b/ass4_2015.pdf">Assignment 4 [2015] (AVAILABLE)</a></li>
@@ -237,12 +258,12 @@
   </div>
 
 	<!--   Midterm/Final -->
-	<div id="midterm-final"></div>
+	
   <br>
 	<br>
 	<br>
 
-  <h2> Midterm/Final Exams</h2>
+  <h2 id="midterm-final"> Midterm/Final Exams</h2>
   <div class="expand">
 		<a><h4>Midterms</h4></a>
 		<ul>
@@ -266,7 +287,7 @@
   <!-- Handle Assignment Expand -->
   <script>
   	$('.expand').addClass("collapsed")
-  	$('.expand a').click(function(){
+  	$('.expand>a:first-child').click(function(){
   		var target = $(event.currentTarget).parent()
   		if(target.hasClass("collapsed")){
   			target.removeClass("collapsed")
@@ -282,4 +303,6 @@
 		  $('[data-toggle="tooltip"]').tooltip()
 		})
 	</script>
-</body></html>
+
+</body>
+</html>
